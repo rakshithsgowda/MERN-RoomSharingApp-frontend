@@ -16,11 +16,11 @@ export default function Homescreen() {
         // console.log(response.data.rooms)
         setRooms(response.data.rooms)
         setLoading(false)
-      } catch (error) {
+      } catch (err) {
         SetError(true)
         // console.log(err)
-        throw Error(error)
-        setLoading(false)
+        throw Error(err)
+        // setLoading(false)
       }
     }
     fetchData()
